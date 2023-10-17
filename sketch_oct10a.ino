@@ -1,6 +1,5 @@
 int ledPins[] = {2, 3, 4, 5, 6, 7, 8, 9, 10, 11};
 int numLeds = 10;
-long long len = 10;
 long long itc_bin_num(long long number) {
     int a = 0, b = 1;
     while (number) {
@@ -23,7 +22,7 @@ void loop() {
     int number = Serial.parseInt();
     int numbin = itc_bin_num(number);
     while(numbin > 0) {
-        int s = numbin % len;
+        int s = numbin % 10;
         for (int i = 0; i < numLeds; i++) 
         {
             if (s == 1) {
