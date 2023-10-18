@@ -18,7 +18,6 @@ void setup() {
 }
 
 void loop() {
-  
     int number = Serial.parseInt();
     int numbin = itc_bin_num(number);
     while(numbin > 0) {
